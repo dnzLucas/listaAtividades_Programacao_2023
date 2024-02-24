@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que peça ao usuário para informar cinco números.
+    No final, apresente o maior número informado pelo usuário.
+    */
+
+    //ENTRADA
+
+    let numeros = []
+
+    //PROCESSAMENTO
+
+    for (let n = 1; n <= 5; n++) {
+        const num = Number(prompt("Informe o seu pai"))
+        numeros.push(num)
+        numeros.sort((a,b)=>a-b)
+
+    }
+
+    //SAÍDA
+
+    document.write(`O número maior é ${numeros [numeros.length-1]}.`)
+
+</script>

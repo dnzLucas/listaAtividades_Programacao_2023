@@ -1,0 +1,66 @@
+<meta charset="UTF-8" />
+<script>
+  // Tanto faz: Operador Ternário ou Switch...Case
+  /*
+      Problema: Considere que uma pessoa está em um mercado e foi comprar uma certa quantidade de Bebida (apenas uma bebida). Peça para ela informar a quantidade que deseja comprar daquela bebida, sendo que as bebidas possíveis são:
+      Refrigerante (RF): R$ 4,50
+      Água Sem Gás (AS): R$ 2,90
+      Água Com Gás (AC): R$ 3,00
+      Suco Natural (SN): R$ 3,90
+      O usuário informará uma das opções citadas acima para compra.
+      Calcule qual o valor final da compra. Caso o valor ultrapasse R$ 150,00, haverá um desconto de 10% no valor da compra.
+      Apresente o resultado final a ser pago pelo comprador da bebida.
+      */
+
+  //Entrada
+
+  const qtd = Number(
+    prompt("Qual a quantidade de bebida que você deseja comprar? ")
+  );
+
+  const bebida = prompt(
+    "Qual bebida você deseja comprar? Refrigerante (RF): R$ 4,50; Água Sem Gás (AS): R$ 2,90; Água Com Gás (AC): R$ 3,00; Suco Natural (SN): R$ 3,90"
+  ).toUpperCase();
+
+  //Processamento
+
+  let ppu = 0; //ppu = Preço por unidade
+
+  switch (bebida) {
+    case "RF":
+      ppu = 4.5;
+      break;
+
+    case "AS":
+      ppu = 2.9;
+      break;
+
+    case "AC":
+      ppu = 3;
+      break;
+
+    case "SN":
+      ppu = 3.9;
+      break;
+
+    default:
+      alert("Não temos essa bebida.");
+      break;
+  }
+
+  const vf = qtd * ppu;
+  vf > 150
+    ? alert(`O valor final é: $${vf - (vf * 0.1).toFixed(2)}.`)
+    : alert(`O valor final é: $${vf.toFixed(2)} `);
+
+  //Saída
+
+  /*
+  Para testar:
+  Entradas: Quantidade de bebida (número) e Tipo da Bebida (RF, AS, AC ou SN)
+  - Informando 35 (quantidade) e RF (tipo da bebida), a resposta será "Custo: R$ 141,75"
+  - Informando 35 (quantidade) e AS (tipo da bebida), a resposta será "Custo: R$ 101,50"
+  - Informando 35 (quantidade) e AC (tipo da bebida), a resposta será "Custo: R$ 105,00"
+  - Informando 35 (quantidade) e SN (tipo da bebida), a resposta será "Custo: R$ 136,50"
+  */
+</script>

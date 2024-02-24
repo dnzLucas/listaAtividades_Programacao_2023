@@ -1,0 +1,36 @@
+<script>
+    //PROBLEMA
+    /*
+    Peça para o feirante informar a quantia de itens que foram vendidos de cada produto.
+    Considere que os itens que comercializa e os seus respectivos preços, são:
+    - Tomate: R$ 3,90 (Kg)
+    - Batata: R$ 3,40 (Kg)
+    - Batata-Doce: R$ 4,70 (Kg)
+    - Alface: R$ 1,50 (Und)
+    - Cebola: R$ 2,90 (Kg)
+    - Cebolinha: R$ 1,40 (Und)
+    - Beterraba: R$ 4,10 (Kg)
+
+    Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
+    */
+
+    //ENTRADA
+
+    alert(`PREÇOS: \nTomate: R$ 3,90 (Kg) \n Batata: R$ 3,40 (Kg) \n BatataDoce: R$ 4,70 (Kg) \n Alface: R$ 1,50 (Und) \n Cebola: R$ 2,90 (Kg) \n Cebolinha: R$ 1,40 (Und) \n Beterraba: R$ 4,10 (Kg)`)
+
+    const itens = ["tomate", "batata","batata doce", "alface", "cebola", "cebolinha", "beterraba"];
+    const precos = [3.90, 3.40, 4.70, 1.50, 2.90, 1.40, 4.10];
+    let fat = 0;
+    
+    //PROCESSAMENTO
+
+    for (let i = 0; i < itens.length; i++) {
+        const qtd = Number(prompt(`Quantos kgs de ${itens[i]} você deseja?`));
+        fat += precos[i]*qtd;
+    }
+    document.write(`O faturamento do vendedor foi de $${fat.toFixed(2)}`)
+    
+    
+    //SAÍDA
+    
+</script>

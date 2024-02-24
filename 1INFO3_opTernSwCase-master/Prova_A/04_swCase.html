@@ -1,0 +1,45 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+    Problema: Curso Matriculado
+    Peça para o programa perguntar para o usuário em que curso que está matriculado.
+    - Caso o usuário responta Medicina Veterinária (MV), o programa apresentará a mensagem "Curso de 5 anos".
+    - Caso o usuário informe Sistemas de Inofrmação (SI), o programa apresentará a mensagem "Curso de 4 anos".
+    - Caso informe Agronomia (AG), o programa apresentará a mensagem "Curso de 4 anos e meio",
+    Apresente a mensagem em tela.
+    */
+
+  //Entrada
+
+  const curso = prompt(
+    "Em qual curso você está matriculado? (MV - Medicina veterinária; SI - Sistemas de informação; AG - Agronomia)"
+  ).toUpperCase();
+
+  //Processamento
+
+  switch (curso) {
+    case "MV":
+      alert("Curso de 5 anos. ");
+      break;
+
+    case "SI":
+      alert("Curso de 4 anos. ");
+
+    case "AG":
+      alert("Curso de 4 anos e meio");
+
+    default:
+      alert("ERRO");
+      break;
+  }
+
+  //Saída
+
+  /*
+Para testar:
+Entrada: Curso Matriculado (poderá ser MV, SI ou AG)
+- Informando MV, a mensagem deverá ser "Curso de 5 anos"
+- Informando SI, a mensagem deverá ser "Curso de 4 anos"
+- Informando AG, a mensagem deverá ser "Curso de 4 anos e meio"
+*/
+</script>

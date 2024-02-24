@@ -1,0 +1,91 @@
+<script>
+    //Problema: Loja de veículos
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    // let carrosHatch = ["308", "Focus", "i30"];
+    
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Apresente a lista final de cada tipo de veículo.
+
+    //ENTRADA
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    const c1 = (prompt("Insira o primeiro veículo: "))
+    const t1 = Number(prompt("Insira o tipo de veículo: (1 - SUV; 2 - Sedan; 3 - Hatch)"))
+
+    const c2 = (prompt("Insira o segundo veículo: "))
+    const t2 = Number(prompt("Insira o tipo de veículo: (1 - SUV; 2 - Sedan; 3 - Hatch)"))
+
+    const c3 = (prompt("Insira o terceiro veículo: "))
+    const t3 = Number(prompt("Insira o tipo de veículo: (1 - SUV; 2 - Sedan; 3 - Hatch)"))
+
+
+    //PROCESSAMENTO
+
+    switch (t1) {
+        case 1:
+            carrosSUV.push(c1)
+            break;
+    
+        case 2:
+            cassosSedan.push(c1)
+            break;
+
+        case 3:
+            carrosHatch.push(c1)
+            break;
+
+        default:
+            alert("Valor inválido! ")
+            break;
+    }
+
+    switch (t2) {
+        case 1:
+            carrosSUV.push(c2)
+            break;
+    
+        case 2:
+            cassosSedan.push(c2)
+            break;
+
+        case 3:
+            carrosHatch.push(c2)
+            break;
+
+        default:
+            alert("Valor inválido! ")
+            break;
+    }
+
+    switch (t3) {
+        case 1:
+            carrosSUV.push(c3)
+            break;
+    
+        case 2:
+            cassosSedan.push(c3)
+            break;
+ 
+        case 3:
+            carrosHatch.push(c3)
+            break;
+
+        default:
+            alert("Valor inválido! ")
+            break;
+    }
+
+    //SAÍDA
+
+    alert("Veja a seguir as listas atualizadas: ")
+    alert(carrosSUV.join(", "))
+    alert(cassosSedan.join(", "))
+    alert(carrosHatch.join(", "))
+
+</script>
