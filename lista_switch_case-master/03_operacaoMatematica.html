@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA: Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+
+    const n1 = Number(prompt("Insira o primeiro número"))
+    const n2 = Number(prompt("Insira o segundo número"))
+    const op = prompt("Digite a operação: (+, -, *, /.)")
+
+    //PROCESSAMENTO
+
+            let con;
+            let nparimpar;
+            let nposneg;
+            let IntDec;
+            let resposta;
+
+            switch (op) {
+                case "*":
+                    con = n1 * n2;
+                    nparimpar = con % 2;
+                    nposneg = (con / 1 > 0) ? true : false;
+                    IntDec = Number.isInteger(con);
+                    resposta = `O resultado da sua multiplicação é ${con}`;
+                    break;
+                case "/":
+                    con = n1 / n2;
+                    nparimpar = con % 2;
+                    nposneg = (con / 1 > 0) ? true : false;
+                    IntDec = Number.isInteger(con);
+                    resposta = `O resultado da sua divisão é ${con}`;
+                    typeof IntDec
+                    break;
+                case "+":
+                    con = n1 + n2;
+                    nparimpar = con % 2;
+                    nposneg = (con / 1 > 0) ? true : false;
+                    IntDec = Number.isInteger(con);
+                    resposta = `O resultado da sua adição é ${con}`;
+                    break;
+                case "-":
+                    con = n1 - n2;
+                    nparimpar = con % 2;
+                    nposneg = (con / 1 > 0) ? true : false;
+                    IntDec = Number.isInteger(con);
+                    resposta = `O resultado da sua subtração é ${con}`;
+                    break;
+                default:
+                    alert(`Valor Inválido!`);
+            }
+        switch (nparimpar) {
+            case 0:
+                resposta += `, é par`;
+                break;
+            default:
+                resposta += `, é ímpar`;
+                break;
+        }
+        switch (nposneg) {
+                 case true:
+                resposta += ` inteiro.`;
+                break;
+            default:
+                resposta += ` decimal.`;
+                break;
+        }
+        alert(resposta)    
+    }
+    
+    
+    //SAÍDA
+
+</script>
